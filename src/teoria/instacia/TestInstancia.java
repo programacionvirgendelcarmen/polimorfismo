@@ -1,9 +1,11 @@
-package teoria.clasesAbstractas;
+package teoria.instacia;
+
+
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Test {
+public class TestInstancia {
     public static void main(String[] args) {
         List<FiguraRegular> figuras = new ArrayList<>();
         FiguraRegular cuadrado  =  new Cuadrado(3.2);
@@ -18,8 +20,17 @@ public class Test {
         for (FiguraRegular figura : figuras) {
             System.out.printf("%s: perímetro: %.2f%n",
                     figura.getNombreFigura(), figura.calcularPerimetro());
-         System.out.printf("%s: área: %.2f%n",
-                  figura.getNombreFigura(), figura.calcularArea());
+            if (figura instanceof Cuadrado) {
+                Cuadrado cuadrado = (Cuadrado) figura;
+                System.out.printf("%s: área: %.2f%n",
+                        figura.getNombreFigura(), cuadrado.calcularArea());
+            }
+            if (figura instanceof TrianguloEquilatero) {
+                TrianguloEquilatero trianguloEquilatero = (TrianguloEquilatero) figura;
+                System.out.printf("%s: área: %.2f%n",
+                        figura.getNombreFigura(), trianguloEquilatero.calcularArea());
+            }
+
         }
     }
 }
