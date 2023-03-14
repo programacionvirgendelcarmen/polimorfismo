@@ -1,4 +1,4 @@
-package teoria.interfacesPre7.ejercicio;
+package teoria.interfaces.ejercicio;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,4 +38,15 @@ public class Geometria {
         return figuras.remove(figura);
     }
     //método que devuelva la figura de mayor área
+    public Figura getFiguraMayorArea() {
+        Figura figuraGrande = null;
+        double areaGrande = 0;
+        for (Figura figura : figuras) {
+            if (figura.calcularArea() > areaGrande){
+                areaGrande = figura.calcularArea();
+                figuraGrande = figura;
+            }
+        }
+        return figuraGrande;
+    }
 }

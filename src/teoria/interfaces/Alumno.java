@@ -1,4 +1,4 @@
-package teoria.interfacesPre7;
+package teoria.interfaces;
 
 public class Alumno implements Persona{
     private String dni;

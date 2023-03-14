@@ -1,4 +1,4 @@
-package teoria.interfacesPre7.ejercicio.poligonos;
+package teoria.interfaces.ejercicio.poligonos;
 
 public abstract class PoligonoRegular extends Poligono{
     private double longitudLado;

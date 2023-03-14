@@ -1,4 +1,4 @@
-package teoria.interfacesPre7.ejercicio.figurasCirculares;
+package teoria.interfaces.ejercicio.figurasCirculares;
 
 public class Elipse extends FiguraCircular{
     public Elipse(double semiejeMayor, double semiejeMenor) {

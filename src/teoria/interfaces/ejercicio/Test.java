@@ -1,8 +1,10 @@
-package teoria.interfacesPre7.ejercicio.figurasCirculares;
+package teoria.interfaces.ejercicio;
 
-import teoria.interfacesPre7.ejercicio.Figura;
-import teoria.interfacesPre7.ejercicio.Geometria;
-import teoria.interfacesPre7.ejercicio.poligonos.Cuadrado;
+import teoria.interfaces.ejercicio.Figura;
+import teoria.interfaces.ejercicio.Geometria;
+import teoria.interfaces.ejercicio.figurasCirculares.Circulo;
+import teoria.interfaces.ejercicio.figurasCirculares.Elipse;
+import teoria.interfaces.ejercicio.poligonos.Cuadrado;
 
 import java.util.List;
 import java.util.Scanner;
@@ -21,7 +23,11 @@ public class Test {
         geometria.addFigura(circulo1); geometria.addFigura(circulo2);
         geometria.addFigura(elipse1); geometria.addFigura(elipse2);
         mostrarDatos(geometria);
-        System.out.println("*******Buscando*********");
+        System.out.println("///////Figura mas grande////////");
+        Figura figuraGrande = geometria.getFiguraMayorArea();
+        System.out.printf("%s-ÁREA: %.2f-PERÍMETRO: %.2f%n",
+                figuraGrande.nombrar(), figuraGrande.calcularArea(),
+                figuraGrande.calcularPerimetro());        System.out.println("*******Buscando*********");
         Scanner sc = new Scanner(System.in);
         String nombreFigura = "";
         do {
@@ -42,6 +48,10 @@ public class Test {
         Cuadrado cuadrado = new Cuadrado(6.5);
         geometria.borrarFigura(cuadrado);
         mostrarDatos(geometria);
+        System.out.println("---------Información completa-------------");
+        for (Figura figura : geometria.getFiguras()) {
+            System.out.println(figura.obtenerInformacionDeFigura());
+        }
 
 
     }

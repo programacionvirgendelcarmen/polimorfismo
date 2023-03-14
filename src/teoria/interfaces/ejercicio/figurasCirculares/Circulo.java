@@ -1,4 +1,4 @@
-package teoria.interfacesPre7.ejercicio.figurasCirculares;
+package teoria.interfaces.ejercicio.figurasCirculares;
 
 public class Circulo extends FiguraCircular{
     public Circulo(double radio) {
@@ -15,5 +15,8 @@ public class Circulo extends FiguraCircular{
         return String.format("%s,%s", super.nombrar(), "CÍRCULO");
     }
 
-
+    @Override
+    public String obtenerInformacionDeFigura() {
+        return "Soy un círculo y no puedo dar información\n";
+    }
 }

@@ -1,4 +1,4 @@
-package teoria.interfacesPre7;
+package teoria.interfaces;
 
 public interface Persona {
 

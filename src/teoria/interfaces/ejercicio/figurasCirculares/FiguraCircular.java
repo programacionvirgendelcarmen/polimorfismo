@@ -1,6 +1,6 @@
-package teoria.interfacesPre7.ejercicio.figurasCirculares;
+package teoria.interfaces.ejercicio.figurasCirculares;
 
-import teoria.interfacesPre7.ejercicio.Figura;
+import teoria.interfaces.ejercicio.Figura;
 
 import java.util.Objects;
 

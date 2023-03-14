@@ -1,6 +1,6 @@
-package teoria.interfacesPre7.ejercicio.poligonos;
+package teoria.interfaces.ejercicio.poligonos;
 
-import teoria.interfacesPre7.ejercicio.Figura;
+import teoria.interfaces.ejercicio.Figura;
 
 import java.util.Objects;
 
