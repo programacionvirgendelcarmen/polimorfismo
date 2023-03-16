@@ -16,4 +16,6 @@ public class Elipse extends FiguraCircular{
     public String nombrar() {
         return String.format("%s,%s", super.nombrar(), "ELÍPSE" );
     }
+
+
 }

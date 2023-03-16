@@ -15,6 +15,14 @@ public interface Figura {
         return builder.toString();
     }
     static Figura getFiguraMenorPerimetro(List<Figura> figuras) {
-        return null;
+        Figura figuraMenorPerimetro = null;
+        double perimetroMasChico = Double.MAX_VALUE;
+        for (Figura figura : figuras) {
+            if (figura.calcularPerimetro() < perimetroMasChico) {
+                perimetroMasChico = figura.calcularPerimetro();
+                figuraMenorPerimetro = figura;
+            }
+        }
+        return figuraMenorPerimetro;
     }
 }

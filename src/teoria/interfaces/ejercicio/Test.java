@@ -18,16 +18,27 @@ public class Test {
         Figura circulo2  = new Circulo(1.1);
         Figura elipse1   = new Elipse(1.1, 0.2);
         Figura elipse2   = new Elipse(4.4, 3.3);
+
         Geometria geometria = new Geometria("geometría 1");
         geometria.addFigura(cuadrado1); geometria.addFigura(cuadrado2);
         geometria.addFigura(circulo1); geometria.addFigura(circulo2);
         geometria.addFigura(elipse1); geometria.addFigura(elipse2);
+
         mostrarDatos(geometria);
+
         System.out.println("///////Figura mas grande////////");
         Figura figuraGrande = geometria.getFiguraMayorArea();
         System.out.printf("%s-ÁREA: %.2f-PERÍMETRO: %.2f%n",
                 figuraGrande.nombrar(), figuraGrande.calcularArea(),
-                figuraGrande.calcularPerimetro());        System.out.println("*******Buscando*********");
+                figuraGrande.calcularPerimetro());
+
+        System.out.println("///////Figura mas grande////////");
+        Figura figuraChica = Figura.getFiguraMenorPerimetro(geometria.getFiguras());
+        System.out.printf("%s-ÁREA: %.2f-PERÍMETRO: %.2f%n",
+                figuraChica.nombrar(), figuraChica.calcularArea(),
+                figuraChica.calcularPerimetro());
+
+        System.out.println("*******Buscando*********");
         Scanner sc = new Scanner(System.in);
         String nombreFigura = "";
         do {
@@ -41,6 +52,8 @@ public class Test {
             }
         } while ( !nombreFigura.equalsIgnoreCase("fin"));
         sc.close();
+
+        //borrando figuras
         Circulo circulo = new Circulo(1.1);
         geometria.borrarFigura(circulo);
         Figura elipse   = new Elipse(1.1, 0.2);
@@ -48,6 +61,8 @@ public class Test {
         Cuadrado cuadrado = new Cuadrado(6.5);
         geometria.borrarFigura(cuadrado);
         mostrarDatos(geometria);
+
+
         System.out.println("---------Información completa-------------");
         for (Figura figura : geometria.getFiguras()) {
             System.out.println(figura.obtenerInformacionDeFigura());
